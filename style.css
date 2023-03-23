@@ -1,30 +1,37 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
+
 body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: Lato, sans-serif;;
+    font-weight: 700;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: rgba(33,155,164,0.66);
+    justify-content: center;
+    color: #555;
+    background-color: #ecf0f3;
 }
 
 .wrapper{
-    width: 370px;
-    padding: 25px 30px;
-    border: 2px solid black;
-    border-radius: 8px;
-    box-shadow: 6px 6px 20px rgba(0,0,0,0.5);
+    width: 430px;
+    height: 700px;
+    padding: 60px 35px 35px 35px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: 13px 13px 20px #cbced1,
+    -13px -13px 20px #ffffff;
 }
 
 .wrapper header{
-    font-size: 28px;
     text-align: center;
-    font-weight: bold;
+    font-size: 28px;
+    padding-top: 24px;
+    letter-spacing: 0.5px;
 }
 
 .wrapper form{
@@ -38,12 +45,19 @@ form .row{
 }
 
 form .row label{
-    font-size: 18px;
-    margin-bottom: 5px;
+    text-align: center;
+    font-size: 15px;
+    padding: 0px 0px 30px 0px;
+    letter-spacing: 3px;
+    width: 100%;
 }
 
+
 form .row:nth-child(2) label{
-    font-size: 17px;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 7px;
+    letter-spacing: 3px;
 }
 
 form :where(textarea,select,button){
@@ -51,7 +65,7 @@ form :where(textarea,select,button){
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 form .row textarea{
@@ -59,7 +73,15 @@ form .row textarea{
     height: 110px;
     font-size: 14px;
     padding: 8px 10px;
-    border: 1px solid black;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+    background-color: #ecf0f3;
+}
+
+.place-holder{
+    color: #555555;
+    text-decoration: none;
 }
 
 form .row textarea::-webkit-scrollbar{
@@ -71,9 +93,11 @@ form .row .outer{
     display: flex;
     padding: 0 10px;
     align-items: center;
-    border-radius: 5px;
     justify-content: center;
-    border: 1px solid black;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+
 }
 
 form .row select{
@@ -93,18 +117,44 @@ form .row select::-webkit-scrollbar-thumb{
 }
 
 form button{
-    height: 52px;
-    color: #ffffff;
-    font-size: 17px;
+    padding: 1.5em 5em;
+    background: #efefef;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    text-align: center;
+    outline: none;
     cursor: pointer;
-    margin-top: 10px;
-    background: #363dc6;
-    transition: 0.2s ease;
+    transition: .2s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
 }
 
+form button:hover{
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+    -2px -2px 4px rgba(255, 255, 255, .4),
+    2px 2px 2px rgba(255, 255, 255, .05),
+    2px 2px 4px rgba(0, 0, 0, .1);
+}
 
+form button:active{
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+    inset -2px -2px 4px rgba(255, 255, 255, .5),
+    inset 2px 2px 2px rgba(255, 255, 255, .075),
+    inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
 
-
+@media (max-width: 400px){
+    .wrapper{
+        max-width: 345px;
+        width: 100%;
+    }
+}
 
 
 
